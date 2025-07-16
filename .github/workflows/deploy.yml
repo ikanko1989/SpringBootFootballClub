@@ -1,4 +1,5 @@
 name: Deploy app to EC2
+
 on:
   push:
     branches: [main]
@@ -11,15 +12,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Java 21
+      - name: Set up Java
         uses: actions/setup-java@v3
         with:
           java-version: "21"
           distribution: "temurin"
 
       - name: Build with Maven
-        working-directory: ./FootballClub
         run: mvn clean package -DskipTests
+        working-directory: ./FootballClub
 
       - name: Copy jar to EC2
         uses: appleboy/scp-action@v0.1.4
@@ -37,5 +38,5 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            pkill -f 'java -jar' || true
             nohup java -jar ~/footballclub/*.jar > ~/footballclub/app.log 2>&1 &
+            sleep 5
