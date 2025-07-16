@@ -17,11 +17,10 @@ jobs:
         with:
           java-version: "21"
           distribution: "temurin"
-          cache: "maven"   # optional: caches maven dependencies to speed up builds
 
       - name: Build with Maven
-        run: mvn clean package -DskipTests
         working-directory: ./FootballClub
+        run: mvn clean package -DskipTests
 
       - name: Copy jar to EC2
         uses: appleboy/scp-action@v0.1.4
@@ -29,7 +28,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "target/*.jar"
+          source: "FootballClub/target/*.jar"
           target: "~/footballclub"
 
       - name: SSH to EC2 and run app
