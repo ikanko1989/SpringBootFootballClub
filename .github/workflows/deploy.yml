@@ -38,6 +38,6 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            nohup java -jar ~/footballclub/*.jar > ~/footballclub/app.log 2>&1 &
+            nohup java -jar ~/footballclub/FootballClub/target/*.jar > ~/footballclub/app.log 2>&1 &
             sleep 5
             tail -n 20 ~/footballclub/app.log
