@@ -40,3 +40,4 @@ jobs:
           script: |
             nohup java -jar ~/footballclub/*.jar > ~/footballclub/app.log 2>&1 &
             sleep 5
+            tail -n 20 ~/footballclub/app.log
