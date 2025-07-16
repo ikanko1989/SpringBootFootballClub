@@ -12,14 +12,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Java 21
+      - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          java-version: "21"
+          java-version: "21"         # Updated for Java 21
           distribution: "temurin"
 
       - name: Build with Maven
-        working-directory: ./FootballClub
+        working-directory: ./FootballClub  # Ensure working directory is correct
         run: mvn clean package -DskipTests
 
       - name: Copy jar to EC2
@@ -28,7 +28,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "FootballClub/target/*.jar"
+          source: "FootballClub/target/*.jar"   # Copy only jar file
           target: "~/footballclub"
 
       - name: SSH to EC2 and run app
