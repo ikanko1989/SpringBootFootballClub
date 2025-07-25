@@ -135,13 +135,10 @@ Terraform will perform the following actions:
             cd /home/ec2-user
             git clone https://github.com/ikanko1989/SpringBootFootballClub.git
             chown -R ec2-user:ec2-user /home/ec2-user/SpringBootFootballClub
-            
             # Run the app as ec2-user
-            sudo -u ec2-user bash -c "
             cd /home/ec2-user/SpringBootFootballClub/FootballClub
-            mvn clean spring-boot:run > /home/ec2-user/springboot.log 2>&1 &
-            "
-        EOT
+            mvn clean nohup spring-boot:run > /home/ec2-user/springboot.log 2>&1 &
+            EOT
       + user_data_base64                     = (known after apply)
       + user_data_replace_on_change          = false
       + vpc_security_group_ids               = (known after apply)
