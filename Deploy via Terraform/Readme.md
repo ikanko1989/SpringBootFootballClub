@@ -1,3 +1,10 @@
+# Description
+Spring Boot App Deployment on AWS EC2 via Terraform.   
+This project uses Terraform to automate the deployment of a Java Spring Boot application on an AWS EC2 instance.   
+When applied:  
+This setup enables quick testing and exposure of Spring Boot app using infrastructure-as-code.
+
+
 # Workflow:
 
 **1. Create an AWS EC2 instance with Terraform**
