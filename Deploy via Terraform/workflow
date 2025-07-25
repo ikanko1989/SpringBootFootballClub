@@ -1,3 +1,25 @@
+root@controlplane ~/code via 💠 default on ☁️  (us-east-1) ➜  ll
+total 72
+drwxr-xr-x 1 root root  4096 Jul 25 07:49 ./
+drwx------ 1 root root  4096 Jul 25 07:36 ../
+drwxr-xr-x 3 root root  4096 Jul 25 07:37 .terraform/
+-rw-r--r-- 1 root root  1404 Jul 25 07:37 .terraform.lock.hcl
+-rw-r--r-- 1 root root   530 Jul  4 10:24 README.md
+-rw-r--r-- 1 root root   320 Jul 25 07:46 ec2.tf
+-rw-r--r-- 1 root root   110 Jul 25 07:46 keypair.tf
+-rw-r--r-- 1 root root   114 Jul 25 07:32 main.tf
+-rw-r--r-- 1 root root   161 Jul 25 07:11 provider.tf
+-rw-r--r-- 1 root root   658 Jul 25 07:25 security_groups.tf
+-rw-r--r-- 1 root root 10920 Jul 25 07:49 terraform.tfstate
+-rw-r--r-- 1 root root   180 Jul 25 07:49 terraform.tfstate.backup
+-rw-r--r-- 1 root root    66 Jul 25 07:09 terraform.tfvars
+-rw-r--r-- 1 root root  1357 Jul 25 07:18 user_data.conf
+-rw-r--r-- 1 root root   735 Jul 25 07:36 variables.tf
+
+
+
+
+
 root@controlplane ~/code via 💠 default on ☁️  (us-east-1) ➜  terraform init
 
 Initializing the backend...
@@ -16,11 +38,17 @@ If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 
-root@controlplane ~/code via 💠 default on ☁️  (us-east-1) ➜  
 
-root@controlplane ~/code via 💠 default on ☁️  (us-east-1) ➜  
 
-root@controlplane ~/code via 💠 default on ☁️  (us-east-1) ➜  
+
+
+
+
+
+
+
+
+
 
 root@controlplane ~/code via 💠 default on ☁️  (us-east-1) ➜  terraform plan
 
