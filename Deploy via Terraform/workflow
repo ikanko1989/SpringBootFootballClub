@@ -326,6 +326,8 @@ Terraform will perform the following actions:
             echo "export PATH=\$M2_HOME/bin:\$PATH" >> /etc/profile.d/maven.sh
             chmod +x /etc/profile.d/maven.sh
             source /etc/profile.d/maven.sh
+            echo "source /etc/profile.d/maven.sh" >> /home/ec2-user/.bash_profile
+            chown ec2-user:ec2-user /home/ec2-user/.bash_profile
             
             # Clone your Spring Boot project
             cd /home/ec2-user
