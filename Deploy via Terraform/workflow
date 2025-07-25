@@ -243,6 +243,20 @@ Changes to Outputs:
 Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply"
 now.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 root@controlplane ~/code via 💠 default on ☁️  (us-east-1) ➜  terraform apply
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
@@ -457,6 +471,23 @@ Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 Outputs:
 
 public_ip = "3.80.49.220"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 root@controlplane ~/code via 💠 default on ☁️  (us-east-1) ➜  terraform show
 # aws_instance.springboot_app:
@@ -683,10 +714,28 @@ Outputs:
 
 public_ip = "3.80.49.220"
 
+
+
+
+
+
+
+
+
+
+
 root@controlplane ~/code via 💠 default on ☁️  (us-east-1) ➜  terraform state list
 aws_instance.springboot_app
 aws_key_pair.deployer
 aws_security_group.allow_ssh_ping_8080
+
+
+
+
+
+
+
+
 
 root@controlplane ~/code via 💠 default on ☁️  (us-east-1) ➜  ping 3.80.49.220
 PING 3.80.49.220 (3.80.49.220) 56(84) bytes of data.
