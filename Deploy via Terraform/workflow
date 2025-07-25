@@ -325,6 +325,8 @@ Terraform will perform the following actions:
             source /etc/profile.d/maven.sh
             echo "source /etc/profile.d/maven.sh" >> /home/ec2-user/.bash_profile
             chown ec2-user:ec2-user /home/ec2-user/.bash_profile
+            chmod +x /etc/profile.d/maven.sh
+            source /etc/profile.d/maven.sh
             
             # Clone your Spring Boot project
             cd /home/ec2-user
@@ -333,9 +335,9 @@ Terraform will perform the following actions:
             
             # Run the app as ec2-user
             sudo -u ec2-user bash -c "
+           # Run the app as ec2-user
             cd /home/ec2-user/SpringBootFootballClub/FootballClub
-            mvn clean spring-boot:run > /home/ec2-user/springboot.log 2>&1 &
-            "
+            mvn clean nohup spring-boot:run > /home/ec2-user/springboot.log 2>&1 &
         EOT
       + user_data_base64                     = (known after apply)
       + user_data_replace_on_change          = false
@@ -522,17 +524,18 @@ resource "aws_instance" "springboot_app" {
         echo "export PATH=\$M2_HOME/bin:\$PATH" >> /etc/profile.d/maven.sh
         chmod +x /etc/profile.d/maven.sh
         source /etc/profile.d/maven.sh
+        chmod +x /etc/profile.d/maven.sh
+        source /etc/profile.d/maven.sh
         
         # Clone your Spring Boot project
         cd /home/ec2-user
         git clone https://github.com/ikanko1989/SpringBootFootballClub.git
         chown -R ec2-user:ec2-user /home/ec2-user/SpringBootFootballClub
         
-        # Run the app as ec2-user
-        sudo -u ec2-user bash -c "
-        cd /home/ec2-user/SpringBootFootballClub/FootballClub
-        mvn clean spring-boot:run > /home/ec2-user/springboot.log 2>&1 &
-        "
+         # Run the app as ec2-user
+         cd /home/ec2-user/SpringBootFootballClub/FootballClub
+         mvn clean nohup spring-boot:run > /home/ec2-user/springboot.log 2>&1 &
+        
     EOT
     user_data_replace_on_change          = false
     vpc_security_group_ids               = [
