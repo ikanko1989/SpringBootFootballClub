@@ -1,1 +1,17 @@
+Workflow:
 
+Create an EC2 instance with Terraform
+
+Use user_data to:
+
+Install Java
+
+Install Git
+
+Clone your Spring Boot app from GitHub
+
+Build & run it on port 8080
+
+Allow HTTP/8080 traffic
+
+Access your app at: http://<EC2-PUBLIC-IP>:8080
