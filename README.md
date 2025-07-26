@@ -16,7 +16,7 @@ Set up continuous deployment using GitHub Actions for automated builds and deplo
 Additionally, I used Terraform Infrastructure as Code (IaC) to provision and deploy the application to AWS EC2 instances, which helped me understand cloud infrastructure automation and management. 
 I learned how to configure and connect the app to both a local in-memory H2 database for fast testing and an AWS RDS MySQL instance for real-world deployment. I also practiced structuring a Spring Boot project with clean separation of entities, repositories, controllers, and services. The project helped reinforce my understanding of backend development, dependency management with Maven, and API testing using Postman. All development and testing was performed using IntelliJ IDEA.
 This repository includes the full source code and configuration files for the FootballClub Spring Boot application, organized as follows. Word doc. includes additional documentation files such as diagrams, screenshots, and detailed descriptions for easier understanding and setup.   
-*Notably, screenshots of the AWS RDS MySQL database and AWS EC2 instance creation process are included to guide manual setup in FootballClub SprintBoot project.doc and Spring Boot app via CI.doc .*
+*Notably, screenshots of the AWS RDS MySQL database and AWS EC2 instance creation process are included to guide manual setups in FootballClub SprintBoot project.doc ,Spring Boot app via CI.doc and SpringBootApp deploy via Terraform.doc *
 
 ## 🚀 Deployment Options
 
