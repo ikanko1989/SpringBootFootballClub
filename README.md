@@ -3,7 +3,12 @@
 "Football Club" Spring Boot app to manage football clubs with CRUD operations, connected to:
 * AWS RDS MySQL database
 * local H2 database
+  
+3 ways of deployement tested:
+* IaC Terraform for deployment to AWS EC2 instance
 * CI deployment using GitHub Actions for automated builds and deployment to an AWS EC2 instance
+* Locally from InteliJ
+  
 ### What I Learned
 
 Through building this Spring Boot FootballClub application, I gained hands-on experience with developing RESTful APIs using Spring Data JPA and Hibernate. 
