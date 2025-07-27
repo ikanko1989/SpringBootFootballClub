@@ -30,8 +30,9 @@ While building the FootballClub Spring Boot application, I gained valuable hands
 _Notably, this repository includes manual setup guides named:_
 * _FootballClub SpringBoot project.doc_
 * _Spring Boot app via CI.doc_
-* _SpringBootApp deploy via Terraform.doc_  
-...with detailed configuration descriptions,screenshots of AWS RDS MySQL, EC2 instance creation, GitHub Actions workflow runs,Terraform etc.
+* _SpringBootApp deploy via Terraform.doc_
+  
+...with detailed configuration descriptions,screenshots of AWS RDS MySQL, EC2 instance creation, GitHub Actions workflow runs,Terraform etc.  
 
 
 ✅**Technologies Used**
