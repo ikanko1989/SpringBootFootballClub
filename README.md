@@ -1,6 +1,6 @@
-# "FootballClub" Spring Boot Application
+# "FootballClub" Java Spring Boot Application
 
-"Football Club" Spring Boot app to manage football clubs with CRUD operations, connected to:
+"Football Club" is Java Spring Boot app to manage football clubs with CRUD operations, connected to:
 * AWS RDS MySQL database
 * local H2 database
   
