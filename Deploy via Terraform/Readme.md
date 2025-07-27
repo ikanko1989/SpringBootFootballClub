@@ -5,13 +5,17 @@ This project demonstrates the automated deployment of a Java Spring Boot applica
 The Spring Boot application itself is a simple yet functional web service for managing football clubs, showcasing typical CRUD operations backed by an embedded database.
 
 # What this project does
-Infrastructure automation: Uses Terraform scripts to provision AWS EC2 instances, configure security groups, and prepare the environment.
+Infrastructure automation:  
+Uses Terraform scripts to provision AWS EC2 instances, configure security groups, and prepare the environment.
 
-Application deployment: Automatically installs Java and Maven on the EC2 instance, builds the Spring Boot app, and starts the application.
+Application deployment:   
+Automatically installs Java and Maven on the EC2 instance, builds the Spring Boot app, and starts the application.
 
-Infrastructure as Code (IaC): Allows you to version, maintain, and share your cloud infrastructure alongside your code.
+Infrastructure as Code (IaC):   
+Allows you to version, maintain, and share your cloud infrastructure alongside your code.
 
-Rapid testing and exposure: Quickly spin up or tear down the app environment for development, testing, or demonstration purposes.
+Rapid testing and exposure:   
+Quickly spin up or tear down the app environment for development, testing, or demonstration purposes.
 
 # Workflow:
 
