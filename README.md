@@ -2,7 +2,8 @@
 
 "Football Club" is Java Spring Boot app to manage football clubs with CRUD operations, connected to:
 * AWS RDS MySQL database
-* local H2 database
+* local H2 database  
+
   
 ✅ Deployment Methods Used 
 
@@ -26,8 +27,11 @@ While building the FootballClub Spring Boot application, I gained valuable hands
 * Implementing **CI/CD** with **GitHub Actions** for automated deployments
 * Using **Terraform** to automate cloud infrastructure provisioning on **AWS**
 
-
-_Notably, this repository includes guide manual setups named "FootballClub SprintBoot project.doc" ,"Spring Boot app via CI.doc" and "SpringBootApp deploy via Terraform.doc" with detailed description of configurations and screenshots of the AWS RDS MySQL database, AWS EC2 instance creation process,GitHub Actions jobs runs etc._
+_Notably, this repository includes manual setup guides named:_
+* _FootballClub SpringBoot project.doc_
+* _Spring Boot app via CI.doc_
+* _SpringBootApp deploy via Terraform.doc_  
+...with detailed configuration descriptions,screenshots of AWS RDS MySQL, EC2 instance creation, GitHub Actions workflow runs,Terraform etc.
 
 
 ✅**Technologies Used**
