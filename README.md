@@ -4,36 +4,49 @@
 * AWS RDS MySQL database
 * local H2 database
   
-3 ways of deployement tested:
-* IaC Terraform for deployment to AWS EC2 instance
-* CI deployment using GitHub Actions for automated builds and deployment to an AWS EC2 instance
-* Locally from InteliJ
+3 ways of deployement tested:  
+_1. IaC Terraform for deployment to AWS EC2 instance_  
+_2. CI deployment using GitHub Actions for automated builds and deployment to an AWS EC2 instance_  
+_3. Locally from InteliJ_  
   
 ### What I Learned
 
-Through building this Spring Boot FootballClub application, I gained hands-on experience with developing RESTful APIs using Spring Data JPA and Hibernate. 
-Set up continuous deployment using GitHub Actions for automated builds and deployment to an AWS EC2 instance.
-Additionally, I used Terraform Infrastructure as Code (IaC) to provision and deploy the application to AWS EC2 instances, which helped me understand cloud infrastructure automation and management. 
-I learned how to configure and connect the app to both a local in-memory H2 database for fast testing and an AWS RDS MySQL instance for real-world deployment. I also practiced structuring a Spring Boot project with clean separation of entities, repositories, controllers, and services. The project helped reinforce my understanding of backend development, dependency management with Maven, and API testing using Postman. All development and testing was performed using IntelliJ IDEA.
-This repository includes the full source code and configuration files for the FootballClub Spring Boot application, organized as follows. Word doc. includes additional documentation files such as diagrams, screenshots, and detailed descriptions for easier understanding and setup.   
-*Notably, screenshots of the AWS RDS MySQL database and AWS EC2 instance creation process are included to guide manual setups in FootballClub SprintBoot project.doc ,Spring Boot app via CI.doc and SpringBootApp deploy via Terraform.doc *
+Through building this Spring Boot FootballClub application, I gained hands-on experience with developing RESTful APIs using Spring Data JPA and Hibernate.   
+I learned how to configure and connect the app to both a local in-memory H2 database for fast testing and an AWS RDS MySQL instance for real-world deployment.        Practiced structuring a Spring Boot project with clean separation of entities, repositories, controllers, and services. 
+This project helped reinforce my understanding of backend development, dependency management with Maven, and API testing using Postman.                             App development and locally testing was performed using IntelliJ IDEA.
+Learned different kinds of app deployment through setting up continuous deployment using GitHub Actions for automated builds and deployment to an AWS EC2 instance.
+Additionally, I used Terraform Infrastructure as Code (IaC) to provision and deploy the application to AWS EC2 instances, which helped me understand cloud infrastructure automation and management.   
+_Notably, this repository includes guide manual setups named "FootballClub SprintBoot project.doc" ,"Spring Boot app via CI.doc" and "SpringBootApp deploy via Terraform.doc" with detailed description of configurations and screenshots of the AWS RDS MySQL database, AWS EC2 instance creation process,GitHub Actions jobs runs etc._
 
 ## 🚀 Deployment Options
 
-### ✅ 1. **CI Automated Deployment to AWS EC2 via GitHub Actions**
-GitHub Actions CI/CD → Builds & SCPs .jar → EC2 instance → EC2 instance → Runs Spring Boot app on port 8080
+### ✅ 1. **IaC Deployment to AWS EC2 via Terraform**
+Terraform → Provisions EC2 instance → Clones GitHub repo → Runs Spring Boot app on port 8080
 
+- Terraform is used to define and provision the AWS EC2 instance as Infrastructure as Code
+- The EC2 instance is configured to install Java ,Git and Maven during setup
+- On startup, the instance clones this GitHub repository
+- The Spring Boot application is built and run automatically
+
+➡️ Accessed the app at:  
+`http://<EC2_PUBLIC_IP>:8080/`  
+(Replaced `<EC2_PUBLIC_IP>` with your actual EC2 instance's public IP or DNS)
+
+
+
+### ✅ 2. **CI Automated Deployment to AWS EC2 via GitHub Actions**
+GitHub Actions CI/CD → Builds & SCPs .jar → EC2 instance → EC2 instance → Runs Spring Boot app on port 8080
 
 - Every push to the `main` branch triggers a GitHub Actions workflow
 - Maven builds the `.jar` file with `mvn clean package -DskipTests`
 - The jar is securely copied to the EC2 instance
 - The app is launched remotely via SSH and logs are written to `~/footballclub/app.log`
 
-➡️ Access the app at:  
+➡️ Accessed the app at:  
 `http://<EC2_PUBLIC_IP>:8080/`  
-(Replace `<EC2_PUBLIC_IP>` with your actual EC2 instance's public IP or DNS)
+(Replaced `<EC2_PUBLIC_IP>` with your actual EC2 instance's public IP or DNS)
 
-### ✅ 2. **Manual Local Run via IntelliJ (or any IDE)**
+### ✅ 3. **Manual Local Run via IntelliJ (or any IDE)**
 #### a) Using AWS RDS MySQL as the database
 #### b) Using H2 In-Memory DB (default)
 
