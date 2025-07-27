@@ -29,6 +29,22 @@ While building the FootballClub Spring Boot application, I gained valuable hands
 
 _Notably, this repository includes guide manual setups named "FootballClub SprintBoot project.doc" ,"Spring Boot app via CI.doc" and "SpringBootApp deploy via Terraform.doc" with detailed description of configurations and screenshots of the AWS RDS MySQL database, AWS EC2 instance creation process,GitHub Actions jobs runs etc._
 
+
+✅**Technologies Used**
+* Java 21
+* Spring Boot
+* Spring Data JPA
+* Hibernate
+* MySQL (via AWS RDS)
+* H2 (for local development)
+* Maven (for build and dependency management)
+* GitHub Actions (for CI/CD pipeline)
+* Terraform (for infrastructure provisioning on AWS)
+* AWS EC2 (to host the application)
+* Postman (for API testing)
+* IntelliJ IDEA (for development)
+
+  
 ## Deployment Options
 
 ### ✅ 1. **IaC Deployment to AWS EC2 via Terraform**
@@ -59,8 +75,7 @@ GitHub Actions CI/CD → Builds & SCPs .jar → EC2 instance → EC2 instance �
 
 ### ✅ 3. **Manual Local Run via IntelliJ (or any IDE)**
 #### a) Using AWS RDS MySQL as the database
-#### b) Using H2 In-Memory DB (default)
-
+#### b) Using H2 In-Memory DB (default)  
 
 
 
@@ -136,8 +151,8 @@ spring.application.name=FootballClub
 
 # AWS RDS MySQL DB
 spring.datasource.url=jdbc:mysql://databasetest.czqg6iykc8s2.us-east-1.rds.amazonaws.com:3306/databasetest?useSSL=false&serverTimezone=UTC
-spring.datasource.username=admin
-spring.datasource.password=Administrator123
+spring.datasource.username=xxxx
+spring.datasource.password=xxxxxxxxxxxx
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
