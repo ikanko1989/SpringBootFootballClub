@@ -4,27 +4,38 @@
 * AWS RDS MySQL database
 * local H2 database
   
-3 ways of deployement tested:  
-_1. IaC Terraform for deployment to AWS EC2 instance_  
-_2. CI deployment using GitHub Actions for automated builds and deployment to an AWS EC2 instance_  
-_3. Locally from InteliJ_  
-  
+✅ Deployment Methods Used 
+
+This project has been successfully deployed using the following methods:
+
+1. **Infrastructure as Code (IaC)** using **Terraform** to provision and deploy to an AWS EC2 instance
+2. **Continuous Integration (CI)** with **GitHub Actions** for automated build and deployment to AWS EC2
+3. **Local execution** from **IntelliJ IDEA** during development and testing
+
+
 ### What I Learned
 
-Through building this Spring Boot FootballClub application, I gained hands-on experience with developing RESTful APIs using Spring Data JPA and Hibernate.   
-I learned how to configure and connect the app to both a local in-memory H2 database for fast testing and an AWS RDS MySQL instance for real-world deployment.        Practiced structuring a Spring Boot project with clean separation of entities, repositories, controllers, and services. 
-This project helped reinforce my understanding of backend development, dependency management with Maven, and API testing using Postman.                             App development and locally testing was performed using IntelliJ IDEA.
-Learned different kinds of app deployment through setting up continuous deployment using GitHub Actions for automated builds and deployment to an AWS EC2 instance.
-Additionally, I used Terraform Infrastructure as Code (IaC) to provision and deploy the application to AWS EC2 instances, which helped me understand cloud infrastructure automation and management.   
+While building the FootballClub Spring Boot application, I gained valuable hands-on experience with:
+
+* Building **RESTful APIs** using Spring Boot, Spring Data JPA, and Hibernate
+* Connecting to both **local H2** and **AWS RDS MySQ**L databases
+* Structuring clean and maintainable code with layers: Entities → Repositories → Services → Controllers
+* Dependency management using **Maven**
+* API testing using **Postman**
+* Local development and testing with **IntelliJ IDEA**
+* Implementing **CI/CD** with **GitHub Actions** for automated deployments
+* Using **Terraform** to automate cloud infrastructure provisioning on **AWS**
+
+
 _Notably, this repository includes guide manual setups named "FootballClub SprintBoot project.doc" ,"Spring Boot app via CI.doc" and "SpringBootApp deploy via Terraform.doc" with detailed description of configurations and screenshots of the AWS RDS MySQL database, AWS EC2 instance creation process,GitHub Actions jobs runs etc._
 
-## 🚀 Deployment Options
+## Deployment Options
 
 ### ✅ 1. **IaC Deployment to AWS EC2 via Terraform**
 Terraform → Provisions EC2 instance → Clones GitHub repo → Runs Spring Boot app on port 8080
 
 - Terraform is used to define and provision the AWS EC2 instance as Infrastructure as Code
-- The EC2 instance is configured to install Java ,Git and Maven during setup
+- The EC2 instance is configured to install Java ,Git and Maven during setup via user data script
 - On startup, the instance clones this GitHub repository
 - The Spring Boot application is built and run automatically
 
